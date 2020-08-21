@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="firecopy.css">
+<title></title>
+<style>
+
+p{
+   font-style:italic;
+   color:white;
+   padding:10px 10px;
+   font-size:30px;
+}
+.container{
+width:50%;
+height:0px;
+background:#fff;
+margin-top:200px;
+margin-left:400px;
+border: 2px solid #fff;
+}
+img{
+  margin-top:250px;
+  margin-left:400px;
+}
+body{
+background-image:url(fire2.jpg);
+}
+legend{
+color:white;
+font-size:30px;
+}
+#navbar{
+margin-top:0px;
+color:black;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+ function validateForm()
+ {
+ 	var user=document.myform.fn.value;
+ 	var con=document.myform.contact.value;
+ 	
+ 	
+ 	//username
+ 	if(user == "")
+ 	{
+ 	  document.getElementById("uname").innerHTML="**please fill username field**";
+	 return false;
+	}
+	if((user.length<=2)||(user.length>20))
+ 	{
+ 	  document.getElementById("uname").innerHTML="**please enter valid username field**";
+	  return false;
+ 	 }
+ 	
+
+	 //contact no.
+ 	if(con == "")
+	{
+	  document.getElementById("con1").innerHTML="**please enter contact **";
+	  return false;
+ 	  } 
+	 if(isNaN(con))
+	{
+	  document.getElementById("con1").innerHTML="**only digits are allowed**";
+ 	  return false;
+ 	} 
+ 	if(con.length !=10)
+	{
+	  document.getElementById("con1").innerHTML="**please enter valid contact**"
+	return false;
+ 	  } 
+}
+
+</script>
+
+
+<div class='container'>
+<form name="myform" action="firestation.php" onsubmit="return validateForm()" method=post>
+
+<fieldset>
+<legend>Personal Details</legend>
+<br>
+<p>First Name:<input type='text' value=' ' size='25px' id='fname' name='fname'/></p>
+<span id="uname" style="color:white;font-weight:bold"></span>
+
+<br>
+
+
+
+<p>Phone Number:<input type="text" maxlength="10" id="contact" size='25px' name='contact'/></p>
+<span id="con1" style="color:white;font-weight:bold"></span>
+<br>
+
+
+
+
+<input type='submit' value='Submit'>
+
+</fieldset>
+</div>
+</form>
+<button class=b2 onclick="window.location.href ='maps.html';">HOSPITALS</button>
+
+
+<div id='navbar'>
+<ul class='d'>
+<li class='k'>FIRE PREVENTION</li>
+<li><a href='firesystemcopy.html'>Home</a></li>
+<li><a href='Eevntsandnews.html'>News and Events</a></li>
+
+  
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Official website</a>
+    <div class="dropdown-content">
+      <a href='http://www.mahafireservice.gov.in/Site/welfareAssociation/MembershipForms.aspx'>Membership Form</a>
+      <a href='http://www.mahafireservice.gov.in/Site/welfareAssociation/WelfareSchemes.aspx'>Welfare Schemes</a>
+      <a href=''></a>
+    </div>
+  </li>
+<li><a href='contactus.html'>Contact Us</a></li>
+</ul>
+</div>
+</body>
+</html>
